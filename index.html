@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arian Niakan — Portfolio</title>
+<meta name="description" content="Arian Niakan — AI application engineer, hardware &amp; neuroscience researcher, and game designer.">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#f7f3ec">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arian Niakan — Portfolio">
+<meta property="og:description" content="Engineer, researcher, and game designer who ships things and measures whether they actually work.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arian Niakan — Portfolio">
+<meta name="twitter:description" content="Engineer, researcher, and game designer who ships things and measures whether they actually work.">
+<meta name="twitter:image" content="assets/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a href="#top" class="masthead-mark">A.N.</a>
+    <nav class="masthead-nav" id="siteNav">
+      <a href="#work" data-nav>Work</a>
+      <a href="#play" data-nav>Game Design</a>
+      <a href="#dispatches" data-nav>Background</a>
+      <a href="#index" data-nav>Skills</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <a class="masthead-cv" href="assets/Arian_Niakan_CV.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#work" data-nav data-mobile-nav><span class="mobile-nav-num">01</span> Work</a>
+  <a href="#play" data-nav data-mobile-nav><span class="mobile-nav-num">02</span> Game Design</a>
+  <a href="#dispatches" data-nav data-mobile-nav><span class="mobile-nav-num">03</span> Background</a>
+  <a href="#index" data-nav data-mobile-nav><span class="mobile-nav-num">04</span> Skills</a>
+  <a href="#contact" data-nav data-mobile-nav><span class="mobile-nav-num">05</span> Contact</a>
+  <a href="assets/Arian_Niakan_CV.pdf" target="_blank" rel="noopener" class="mobile-nav-cv">Download CV ↓</a>
+</nav>
+<div class="mobile-nav-scrim" id="mobileNavScrim"></div>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow">Portfolio — Vol. 01</p>
+    <h1 class="hero-title">Arian&nbsp;Niakan</h1>
+    <p class="hero-dek">AI engineer and game designer<br class="br-desktop"> with a background in Electrical Engineering and Cognitive Neuroscience research.</p>
+    <p class="hero-meta">Istanbul, Turkey — Game Design MA @ Bahçeşehir University — formerly Electrical Engineering @ University of Tehran</p>
+  </section>
+
+  <!-- CONTENTS -->
+  <nav class="contents" aria-label="Table of contents">
+    <a href="#work" class="contents-item" data-nav>
+      <span class="contents-num">01</span>
+      <span class="contents-label">Work</span>
+      <span class="contents-page">AI &amp; fullstack projects</span>
+    </a>
+    <a href="#play" class="contents-item" data-nav>
+      <span class="contents-num">02</span>
+      <span class="contents-label">Game Design</span>
+      <span class="contents-page">Current focus</span>
+    </a>
+    <a href="#dispatches" class="contents-item" data-nav>
+      <span class="contents-num">03</span>
+      <span class="contents-label">Background</span>
+      <span class="contents-page">Research &amp; hardware</span>
+    </a>
+    <a href="#index" class="contents-item" data-nav>
+      <span class="contents-num">04</span>
+      <span class="contents-label">Skills &amp; Education</span>
+      <span class="contents-page">Skills, education, languages</span>
+    </a>
+  </nav>
+
+  <!-- EDITOR'S NOTE -->
+  <section class="letter">
+    <div class="letter-rule"></div>
+    <p class="letter-drop">I'm a game design student working in AI engineering, with a background in cognitive science research and Hardware Design and Electrical Engineering. On this site you'll find links to my games and my AI engineering work.</p>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section id="work" class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-sub">Three AI engineering projects.</p>
+    </div>
+
+    <article class="feature">
+      <div class="feature-index">01</div>
+      <div class="feature-body">
+        <h3 class="feature-title">Agentic PR Reviewer</h3>
+        <p class="feature-dek">AI code review agent for GitHub PRs.</p>
+        <p class="feature-text">A Next.js app that hands a real GitHub PR diff to an LLM equipped with two tools: post an actionable review comment for ordinary issues, or bypass GitHub entirely and page a human over Slack for critical vulnerabilities (hardcoded secrets, injection, auth bypass, RCE). The frontend streams the agent's reasoning live via a hand-rolled newline-delimited-JSON protocol — an actual line-by-line activity feed, not a fake spinner. Verified against a purpose-built testbed repo with planted SQL-injection, hardcoded-key, and off-by-one bugs, then locked in with an 8-fixture eval harness that still passes 8/8 in dry-run mode. Along the way: root-caused a 403 on posting PR comments to GitHub's PR-comment endpoints actually being Issues-API permissions under the hood, and fixed an ESM/CJS interop break in Octokit by converting to a lazy dynamic import.</p>
+        <ul class="feature-tags">
+          <li>Next.js</li><li>Vercel AI SDK</li><li>Octokit</li><li>Slack API</li><li>Eval harness</li>
+        </ul>
+        <div class="feature-links">
+          <a href="https://github.com/arianniakan/Agentic-PR-reviewer" target="_blank" rel="noopener">App repo ↗</a>
+          <a href="https://github.com/arianniakan/pr-reviewer-testbed" target="_blank" rel="noopener">Testbed repo ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="feature feature--alt">
+      <div class="feature-index">02</div>
+      <div class="feature-body">
+        <h3 class="feature-title">Knowledge App</h3>
+        <p class="feature-dek">RAG chat app with citations.</p>
+        <p class="feature-text">A retrieval-augmented chat app: add sources, ask questions, get answers cited from the exact chunks that were retrieved and reranked — not text the model was merely asked to cite. Per-user data is hard-isolated by namespace across Pinecone and Redis, gated behind GitHub OAuth, rate-limited against abuse, and automatically wiped after 7 days of inactivity via a Vercel Cron job. An automated eval harness scores retrieval hit-rate and LLM-judged answer correctness at 100% (6/6) on the seeded demo set. Shipping it surfaced a real production debugging streak: a Vercel 4.5MB body-limit 413 that crashed the client instead of erroring cleanly, a <code>DOMMatrix is not defined</code> failure traced to a native dependency invisible to Vercel's file tracer, a second near-identical crash in the PDF worker's dynamic import, and a self-caught OAuth regression where re-pasting env vars silently overwrote production GitHub credentials with local-dev ones — caught and fixed in the same session.</p>
+        <ul class="feature-tags">
+          <li>Next.js</li><li>Pinecone</li><li>Upstash Redis</li><li>Auth.js</li><li>Vercel Cron</li>
+        </ul>
+        <div class="feature-links">
+          <a href="https://knowledge-app-vert.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="feature-index">03</div>
+      <div class="feature-body">
+        <h3 class="feature-title">Steam Reviews Qualitative Coding Tool</h3>
+        <p class="feature-dek">A qualitative coding tool for Steam reviews, with AI-assisted tagging measured against a human coder.</p>
+        <p class="feature-text">A research tool for qualitative game-studies analysis: ingest Steam reviews, build a codebook, tag text spans by hand, and get AI-suggested codes constrained — via structured outputs with a schema enum — to only the codes that actually exist in the codebook. Nothing is written until a researcher explicitly accepts a suggestion, through the same code path a human tag uses. A reliability dashboard then reports Cohen's kappa between the human and AI coders, validated against a hand-computed textbook example before being trusted. The headline architectural bet: there's no server-side database at all — every visitor runs Postgres-in-WebAssembly (PGlite) locally, persisted to IndexedDB, sidestepping multi-user auth entirely. Hardening included a real race condition (two near-simultaneous "accept suggestion" clicks colliding on a SELECT-then-INSERT), reproduced and fixed with an atomic upsert, plus per-IP rate limiting on the AI routes.</p>
+        <ul class="feature-tags">
+          <li>Next.js</li><li>PGlite (Postgres/WASM)</li><li>OpenAI Structured Outputs</li><li>Upstash Redis</li>
+        </ul>
+        <div class="feature-links">
+          <a href="https://steam-review-coding-tool.vercel.app" target="_blank" rel="noopener">Live demo ↗</a>
+          <a href="https://github.com/arianniakan/Steam_Review_Coding_Tool" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- PLAY: GAME DESIGN -->
+  <section id="play" class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Game Design</h2>
+      <p class="section-sub">Studying a master's in game design — here are some of my games.</p>
+    </div>
+
+    <button type="button" class="press-start-btn" id="pressStartBtn">▶ Press Start</button>
+
+    <div class="side-projects" style="margin-top:0; margin-bottom: 44px;">
+      <h4>Shipped games</h4>
+
+      <div class="game-card">
+        <div class="game-card-head">
+          <h3>Yes, Boss!</h3>
+          <ul class="game-tags">
+            <li class="game-tag--jam">Game Jam</li>
+            <li>PICO-8 · Lua</li>
+          </ul>
+        </div>
+        <p class="game-pitch">A rogue-lite about surviving corporate life — get fired, update your CV, and re-climb the ladder until you can afford to retire.</p>
+        <ul class="game-points">
+          <li>Designed the full rogue-lite loop: each run starts at a higher salary with harder tasks, with meta-progression carried between jobs through your in-game CV.</li>
+          <li>Built solo under jam constraints — scoped, coded, and balanced a complete, replayable game.</li>
+        </ul>
+        <div class="feature-links">
+          <a href="https://wild-hair-pirates.itch.io/yes-boss" target="_blank" rel="noopener">Play in browser ↗</a>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-card-head">
+          <h3>Froggy Cafe</h3>
+          <ul class="game-tags">
+            <li class="game-tag--course">Course Project</li>
+            <li>LÖVE · Lua</li>
+          </ul>
+        </div>
+        <p class="game-pitch">A deduction game: run a cafe in a politically charged swamp, figure out each customer's faction, and seat them so the place doesn't get trashed.</p>
+        <ul class="game-points">
+          <li>Procedural puzzle generator — three deduction archetypes composed from faction/feature combinations, so every customer is a fresh logic puzzle.</li>
+          <li>9-day branching narrative with persistent consequences: seating choices can radicalize or save a neutral youth, trigger turf wars, or broker peace. Save slots, economy, and reputation systems.</li>
+        </ul>
+        <div class="feature-links">
+          <a href="https://drive.google.com/drive/folders/1_nYEO2grCD4mlRgOrEWZgYkTi0a9-DWY" target="_blank" rel="noopener">Watch gameplay demo ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="dispatch-list">
+      <li class="dispatch">
+        <div class="dispatch-when">Oct 2025 – Present</div>
+        <div class="dispatch-body">
+          <h3>Master's in Game Design</h3>
+          <p class="dispatch-org">Bahçeşehir University, Istanbul</p>
+        </div>
+      </li>
+      <li class="dispatch">
+        <div class="dispatch-when">Jul 2021 – Dec 2021</div>
+        <div class="dispatch-body">
+          <h3>Game Designer, Volunteer</h3>
+          <p class="dispatch-org">GameIn</p>
+          <p>Designed an online competition game simulating an industrial production economy — players competed for raw materials and manufactured goods. First real exposure to the iterative design process.</p>
+        </div>
+      </li>
+      <li class="dispatch">
+        <div class="dispatch-when">—</div>
+        <div class="dispatch-body">
+          <h3>Unity Mini-Games Collection</h3>
+          <p class="dispatch-org">Personal project</p>
+          <p>A set of small, complete mechanics built with free asset packs, showcasing C# scripting, gameplay logic, and scene setup.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- DISPATCHES: RESEARCH & HARDWARE (background) -->
+  <section id="dispatches" class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Background</h2>
+      <p class="section-sub">Hardware and neuroscience research, 2022–2025, University of Tehran.</p>
+    </div>
+
+    <ul class="dispatch-list">
+      <li class="dispatch">
+        <div class="dispatch-when">Sep 2023 – Sep 2025</div>
+        <div class="dispatch-body">
+          <h3>Time Perception Research Assistant</h3>
+          <p class="dispatch-org">University of Tehran — NBIC Research Institute</p>
+          <p>Designed tasks and handled data collection (EEG and behavioral) and modeling for interval-discrimination and equisection experiments, working with Prof. Simon Grondin and Prof. Mohammad-Reza A. Dehaqani's teams. Built a Raspberry Pi–based controller device delivering synchronized haptic, audio, and visual stimuli for the lab's timing tasks.</p>
+        </div>
+      </li>
+      <li class="dispatch">
+        <div class="dispatch-when">Jul 2024 – Sep 2024</div>
+        <div class="dispatch-body">
+          <h3>Summer Internship Supervisor</h3>
+          <p class="dispatch-org">University of Tehran — NBIC Research Institute</p>
+          <p>Planned and supervised three interns continuing the time-perception research line in Prof. Dehaqani's lab.</p>
+        </div>
+      </li>
+      <li class="dispatch">
+        <div class="dispatch-when">Jul 2023 – May 2024</div>
+        <div class="dispatch-body">
+          <h3>Hardware Security &amp; Encryption Researcher</h3>
+          <p class="dispatch-org">University of Tehran</p>
+          <p>Worked with Prof. Zainalabedin Navabi and Prof. Saeed Safari's team on encryption and cryptography for a custom SoC.</p>
+        </div>
+      </li>
+      <li class="dispatch">
+        <div class="dispatch-when">Oct 2022 – Aug 2023</div>
+        <div class="dispatch-body">
+          <h3>FPGA Engineer — Custom RISC-V Processor (SAYAC)</h3>
+          <p class="dispatch-org">University of Tehran</p>
+          <p>FPGA implementation of a custom RISC-V processor under Prof. Navabi, built for prototyping and side-channel security testing.</p>
+        </div>
+      </li>
+      <li class="dispatch">
+        <div class="dispatch-when">Aug 2022 – Sep 2022</div>
+        <div class="dispatch-body">
+          <h3>Hardware Design Engineering Intern</h3>
+          <p class="dispatch-org">CROUSE PJS Co.</p>
+          <p>Built an airbag microcontroller tester system for the R&amp;D team, emulating an acceleration sensor on a Zynq SoC FPGA.</p>
+        </div>
+      </li>
+      <li class="dispatch">
+        <div class="dispatch-when">Jun 2024 – Sep 2024</div>
+        <div class="dispatch-body">
+          <h3>Data Science Team Member</h3>
+          <p class="dispatch-org">Quera — Online Programming Skill Assessment</p>
+          <p>Wrote an NLP course's textbook, instructions, and exercises, plus contest questions built from public and crawled data.</p>
+        </div>
+      </li>
+      <li class="dispatch">
+        <div class="dispatch-when">—</div>
+        <div class="dispatch-body">
+          <h3>Teaching Assistant</h3>
+          <p class="dispatch-org">University of Tehran</p>
+          <p>Digital Systems Design &amp; Logic Gates (Prof. Navabi) and the Computer Architecture Lab (Prof. Safari).</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="side-projects">
+      <h4>Other research projects</h4>
+      <ul class="side-list">
+        <li>Brain tumor classification from MRI images using a convolutional neural network</li>
+        <li>Re-simulation of a two-compartment hippocampal pyramidal cell model, with bifurcation-diagram analysis in XPP Auto</li>
+        <li>An interactive explorer for classic neural models and experiments (Hodgkin–Huxley, voltage clamp) with live parameter sliders</li>
+        <li>Simulations of the LIF, FitzHugh–Nagumo, and Ferguson–Campbell models</li>
+        <li>Reward-driven attention modeling — team project, Neuromatch Academy Computational Neuroscience summer school</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INDEX: SKILLS -->
+  <section id="index" class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Skills &amp; Education</h2>
+      <p class="section-sub">Skills, education, and languages.</p>
+    </div>
+
+    <div class="index-grid">
+      <div class="index-col">
+        <h4>AI &amp; Fullstack Engineering</h4>
+        <p>Next.js, React, TypeScript · Vercel AI SDK · Retrieval-augmented generation, evals · Python (TensorFlow, PyTorch, scikit-learn, Pandas, NumPy, Django)</p>
+      </div>
+      <div class="index-col">
+        <h4>Game Development</h4>
+        <p>Unity (C#) · Godot (GDScript / C#) · LÖVE &amp; PICO-8 (Lua) · Gameplay prototyping, rapid iteration, game-feel tuning · Systems &amp; economy design</p>
+      </div>
+      <div class="index-col">
+        <h4>AI-Assisted Workflow</h4>
+        <p>GitHub Copilot · Claude Code · Gemini · GPT — daily drivers for prototyping, refactoring, and debugging; comfortable vibe-coding a feature, then hardening it by hand.</p>
+      </div>
+      <div class="index-col">
+        <h4>Hardware &amp; Embedded Systems</h4>
+        <p>Verilog / SystemVerilog, VHDL, SystemC · FPGA on Altera &amp; Xilinx Zynq SoC (ModelSim, Vivado, Quartus) · C/C++ (OOP, CUDA) · Raspberry Pi &amp; custom peripherals</p>
+      </div>
+      <div class="index-col">
+        <h4>Research &amp; Data</h4>
+        <p>MATLAB, EEG &amp; signal processing · Probability &amp; statistics, AI modeling · Study/task design and data collection</p>
+      </div>
+      <div class="index-col">
+        <h4>Languages</h4>
+        <p>Persian — native · English — fluent (TOEFL 114: R30 / L30 / S28 / W26) · French — beginner</p>
+      </div>
+      <div class="index-col">
+        <h4>Education</h4>
+        <p>MA Game Design, Bahçeşehir University (2025–present)<br>BSc Electrical Engineering (Digital Systems), University of Tehran (2019–2024)</p>
+      </div>
+    </div>
+
+    <p class="award">🥈 Silver medal, Domestic Olympiad on Astronomy &amp; Astrophysics — Iran's National Elites Foundation</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="contact-rule"></div>
+    <h2 class="contact-title">Let's talk.</h2>
+    <p class="contact-text">Reach out by email, LinkedIn, or GitHub.</p>
+    <div class="contact-links">
+      <a href="mailto:arianniakan1@gmail.com">arianniakan1@gmail.com</a>
+      <a href="https://www.linkedin.com/in/arian-niakan-b16794186/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://github.com/arianniakan" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://wild-hair-pirates.itch.io" target="_blank" rel="noopener">itch.io ↗</a>
+      <a href="assets/Arian_Niakan_CV.pdf" target="_blank" rel="noopener">Download CV ↓</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Arian Niakan, 2026. <span class="footer-hint">— ↑ ↑ ↓ ↓ ← → ← → B A for a secret level</span></p>
+</footer>
+
+<div class="konami-overlay" id="konamiOverlay" hidden>
+  <div class="konami-panel">
+    <button type="button" class="konami-close" id="konamiClose" aria-label="Close">✕</button>
+    <p class="konami-eyebrow">// SECRET LEVEL UNLOCKED</p>
+    <h3 class="konami-title">Yes, Boss! <span class="konami-title-sub">(the browser tab version)</span></h3>
+    <canvas id="konamiCanvas" width="480" height="220"></canvas>
+    <div class="konami-hud">
+      <span id="konamiScore">Score: 0</span>
+      <span class="konami-instructions">Space / ↑ to jump — Esc to close</span>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
