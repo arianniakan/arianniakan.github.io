@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Arian Niakan — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f7f3ec;
+    --bg-raised: #fffdf9;
+    --ink: #1b1712;
+    --ink-soft: #5c564c;
+    --ink-faint: #8a8378;
+    --accent: #c8441f;
+    --accent-soft: #f0dccf;
+    --rule: #ddd5c6;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
+  }
+
+  html, body { width: 210mm; height: 297mm; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 8.4pt;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { width: 210mm; height: 297mm; padding: 14mm 15mm 11mm; display: flex; flex-direction: column; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ---------- Header ---------- */
+  header { margin-bottom: 6mm; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 6.6pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 2mm;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 27pt;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.3mm;
+  }
+
+  .dek {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 11pt;
+    color: var(--ink-soft);
+    max-width: 145mm;
+    margin-bottom: 3mm;
+  }
+
+  .meta {
+    font-size: 7.6pt;
+    color: var(--ink-faint);
+    margin-bottom: 3mm;
+  }
+
+  .contact-row {
+    font-family: var(--mono);
+    font-size: 7.3pt;
+    color: var(--ink-soft);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 3mm;
+  }
+
+  .contact-row .site-link {
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .header-rule { height: 1px; background: var(--ink); margin-top: 4mm; }
+
+  /* ---------- Body grid ---------- */
+  .body-grid { display: flex; gap: 9mm; flex: 1; min-height: 0; }
+  .col-main { width: 62%; }
+  .col-side { width: 38%; }
+
+  section { margin-bottom: 4.6mm; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 2.2mm;
+    margin-bottom: 2.6mm;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1.2mm;
+  }
+
+  .section-num { font-family: var(--mono); font-size: 6.8pt; color: var(--accent); }
+
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 10.5pt;
+  }
+
+  /* ---------- Projects ---------- */
+  .project { margin-bottom: 3.4mm; }
+  .project:last-child { margin-bottom: 0; }
+
+  .project-head { display: flex; align-items: baseline; justify-content: space-between; gap: 2mm; margin-bottom: 0.6mm; }
+
+  .project-title { font-family: var(--serif); font-weight: 600; font-size: 9.3pt; }
+
+  .project-link { font-family: var(--mono); font-size: 6.6pt; color: var(--accent); white-space: nowrap; }
+
+  .project-dek {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 7.8pt;
+    margin-bottom: 1mm;
+  }
+
+  .project-text { font-size: 7.7pt; color: var(--ink); margin-bottom: 1.3mm; }
+
+  .project-tags {
+    font-family: var(--mono);
+    font-size: 6.3pt;
+    color: var(--ink-faint);
+  }
+  .project-tags span:not(:last-child)::after { content: " · "; }
+
+  /* ---------- Compact list (game design / background) ---------- */
+  .compact-item { margin-bottom: 2.6mm; }
+  .compact-item:last-child { margin-bottom: 0; }
+
+  .compact-head { display: flex; justify-content: space-between; align-items: baseline; gap: 2mm; }
+
+  .compact-title { font-family: var(--serif); font-weight: 600; font-size: 8.6pt; }
+
+  .compact-when { font-family: var(--mono); font-size: 6.3pt; color: var(--ink-faint); white-space: nowrap; }
+
+  .compact-org { font-size: 7.2pt; color: var(--accent); font-weight: 600; margin-top: 0.2mm; }
+
+  .compact-text { font-size: 7.3pt; color: var(--ink-soft); margin-top: 0.5mm; }
+
+  .compact-link { font-family: var(--mono); font-size: 6.3pt; color: var(--accent); }
+
+  /* ---------- Background: tighter single-line entries ---------- */
+  .bg-item { margin-bottom: 2.3mm; }
+  .bg-item:last-child { margin-bottom: 0; }
+  .bg-role { font-family: var(--serif); font-weight: 600; font-size: 8.1pt; }
+  .bg-org-when { font-size: 6.9pt; color: var(--ink-faint); margin-top: 0.2mm; }
+  .bg-org-when .org { color: var(--accent); font-weight: 600; }
+  .bg-text { font-size: 7pt; color: var(--ink-soft); margin-top: 0.5mm; }
+
+  /* ---------- Skills / index ---------- */
+  .skill-group { margin-bottom: 2.6mm; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-label {
+    font-family: var(--mono);
+    font-size: 6.3pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8mm;
+  }
+  .skill-value { font-size: 7.3pt; color: var(--ink-soft); }
+
+  .award-box {
+    border: 0.4pt solid var(--rule);
+    background: var(--bg-raised);
+    padding: 2mm 2.4mm;
+    font-size: 6.9pt;
+    color: var(--ink-soft);
+    margin-top: 1mm;
+  }
+  .award-box b { color: var(--ink); }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: auto;
+    padding-top: 3mm;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--mono);
+    font-size: 6.8pt;
+    color: var(--ink-faint);
+  }
+
+  footer .cta { color: var(--accent); font-weight: 700; font-size: 7.6pt; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <p class="eyebrow">Résumé — Portfolio Vol. 01</p>
+    <h1>Arian Niakan</h1>
+    <p class="dek">AI engineer and game designer with a background in Electrical Engineering and Cognitive Neuroscience research.</p>
+    <p class="meta">Istanbul, Turkey — Game Design MA @ Bahçeşehir University — formerly Electrical Engineering @ University of Tehran</p>
+    <div class="contact-row">
+      <span>arianniakan1@gmail.com</span>
+      <span>linkedin.com/in/arian-niakan-b16794186</span>
+      <span>github.com/arianniakan</span>
+      <span>wild-hair-pirates.itch.io</span>
+      <span class="site-link">arianniakan.github.io ↗</span>
+    </div>
+    <div class="header-rule"></div>
+  </header>
+
+  <div class="body-grid">
+    <div class="col-main">
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2 class="section-title">Work — AI Engineering</h2>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <span class="project-title">Agentic PR Reviewer</span>
+            <span class="project-link">github.com/arianniakan/Agentic-PR-reviewer</span>
+          </div>
+          <p class="project-dek">AI code review agent for GitHub PRs.</p>
+          <p class="project-text">LLM agent with two tools: posts review comments for standard issues, or pages Slack directly for critical vulnerabilities (hardcoded secrets, injection, RCE). Streams live via a hand-rolled NDJSON protocol; locked in with an 8-fixture eval harness passing 8/8.</p>
+          <p class="project-tags"><span>Next.js</span><span>Vercel AI SDK</span><span>Octokit</span><span>Slack API</span></p>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <span class="project-title">Knowledge App</span>
+            <span class="project-link">knowledge-app-vert.vercel.app</span>
+          </div>
+          <p class="project-dek">RAG chat app with citations.</p>
+          <p class="project-text">Retrieval-augmented chat over PDFs, websites, and YouTube — reranked retrieval, per-user namespacing, GitHub OAuth, rate limiting, automatic inactive-data cleanup. Eval harness scores 100% retrieval hit-rate and 100% answer correctness on the demo set.</p>
+          <p class="project-tags"><span>Next.js</span><span>Pinecone</span><span>Upstash Redis</span><span>Auth.js</span></p>
+        </div>
+
+        <div class="project">
+          <div class="project-head">
+            <span class="project-title">Steam Reviews Qualitative Coding Tool</span>
+            <span class="project-link">steam-review-coding-tool.vercel.app</span>
+          </div>
+          <p class="project-dek">Qualitative coding tool for Steam reviews with AI-assisted tagging.</p>
+          <p class="project-text">AI code suggestions constrained to a researcher's codebook via structured outputs; human-in-the-loop acceptance; agreement with human coders measured via Cohen's kappa. Local-first architecture — Postgres-in-WebAssembly, no server-side database.</p>
+          <p class="project-tags"><span>Next.js</span><span>PGlite</span><span>OpenAI Structured Outputs</span></p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2 class="section-title">Game Design</h2>
+        </div>
+
+        <div class="compact-item">
+          <div class="compact-head">
+            <span class="compact-title">Master's in Game Design</span>
+            <span class="compact-when">Oct 2025 – Present</span>
+          </div>
+          <p class="compact-org">Bahçeşehir University, Istanbul</p>
+        </div>
+
+        <div class="compact-item">
+          <div class="compact-head">
+            <span class="compact-title">Yes, Boss!</span>
+            <span class="compact-link">wild-hair-pirates.itch.io/yes-boss</span>
+          </div>
+          <p class="compact-text">Rogue-lite about surviving corporate life, built solo for a game jam. PICO-8 / Lua.</p>
+        </div>
+
+        <div class="compact-item">
+          <div class="compact-head">
+            <span class="compact-title">Froggy Cafe</span>
+          </div>
+          <p class="compact-text">Deduction game with a procedural puzzle generator and branching narrative. Course project — LÖVE / Lua.</p>
+        </div>
+
+        <div class="compact-item">
+          <div class="compact-head">
+            <span class="compact-title">Game Designer, Volunteer</span>
+            <span class="compact-when">Jul – Dec 2021</span>
+          </div>
+          <p class="compact-org">GameIn</p>
+          <p class="compact-text">Designed an online competition game simulating an industrial production economy.</p>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="col-side">
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2 class="section-title">Background</h2>
+        </div>
+
+        <div class="bg-item">
+          <p class="bg-role">Time Perception Research Assistant</p>
+          <p class="bg-org-when"><span class="org">Univ. of Tehran — NBIC Institute</span> · 2023–2025</p>
+          <p class="bg-text">EEG/behavioral data; built a Raspberry Pi stimulus-delivery device for timing experiments.</p>
+        </div>
+
+        <div class="bg-item">
+          <p class="bg-role">Hardware Security &amp; Encryption Researcher</p>
+          <p class="bg-org-when"><span class="org">Univ. of Tehran</span> · 2023–2024</p>
+        </div>
+
+        <div class="bg-item">
+          <p class="bg-role">FPGA Engineer — Custom RISC-V (SAYAC)</p>
+          <p class="bg-org-when"><span class="org">Univ. of Tehran</span> · 2022–2023</p>
+          <p class="bg-text">FPGA implementation for prototyping and side-channel security testing.</p>
+        </div>
+
+        <div class="bg-item">
+          <p class="bg-role">Hardware Design Engineering Intern</p>
+          <p class="bg-org-when"><span class="org">CROUSE PJS Co.</span> · Aug–Sep 2022</p>
+        </div>
+
+        <div class="bg-item">
+          <p class="bg-role">Data Science Team Member</p>
+          <p class="bg-org-when"><span class="org">Quera</span> · Jun–Sep 2024</p>
+        </div>
+
+        <div class="bg-item">
+          <p class="bg-role">Teaching Assistant</p>
+          <p class="bg-org-when"><span class="org">Univ. of Tehran</span> — Digital Systems &amp; Computer Architecture</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2 class="section-title">Skills &amp; Education</h2>
+        </div>
+
+        <div class="skill-group">
+          <p class="skill-label">AI &amp; Fullstack</p>
+          <p class="skill-value">Next.js, React, TypeScript, Vercel AI SDK, RAG/evals, Python (TensorFlow, PyTorch)</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Game Development</p>
+          <p class="skill-value">Unity (C#), Godot, LÖVE &amp; PICO-8 (Lua)</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Hardware &amp; Embedded</p>
+          <p class="skill-value">Verilog/VHDL/SystemC, FPGA (Altera, Xilinx Zynq), C/C++</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">AI-Assisted Workflow</p>
+          <p class="skill-value">GitHub Copilot, Claude Code, Gemini, GPT</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Education</p>
+          <p class="skill-value">MA Game Design, Bahçeşehir University (2025–present)<br>BSc Electrical Engineering, University of Tehran (2019–2024)</p>
+        </div>
+        <div class="skill-group">
+          <p class="skill-label">Languages</p>
+          <p class="skill-value">Persian (native) · English (fluent, TOEFL 114) · French (beginner)</p>
+        </div>
+
+        <div class="award-box">🥈 <b>Silver medal</b>, Domestic Olympiad on Astronomy &amp; Astrophysics — Iran's National Elites Foundation</div>
+      </section>
+
+    </div>
+  </div>
+
+  <footer>
+    <span>Arian Niakan, 2026.</span>
+    <span class="cta">Full portfolio — live demos, code &amp; more → arianniakan.github.io</span>
+  </footer>
+
+</div>
+</body>
+</html>
